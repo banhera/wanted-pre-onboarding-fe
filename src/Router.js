@@ -10,7 +10,7 @@ import Todo from './pages/todo/Todo';
 const Container = styled.div`
   height: 100vh;
   width: 100%;
-  background-color: #dbcaca;
+  background-color: white;
   color: black;
   ${variables.flex({ direction: 'column' })}
 `;

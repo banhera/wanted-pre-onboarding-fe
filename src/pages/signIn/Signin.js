@@ -18,7 +18,7 @@ const SignIn = () => {
     }
   }, []);
 
-  const singInRequest = e => {
+  const signInRequest = e => {
     e.preventDefault();
 
     fetch(`${APP_API.signin}`, {
@@ -45,7 +45,7 @@ const SignIn = () => {
   return (
     <>
       <h1>로그인</h1>
-      <S.Form onSubmit={singInRequest}>
+      <S.Form onSubmit={signInRequest}>
         <S.LabelWrapper>
           <S.Label>
             <span>email</span>
@@ -53,7 +53,7 @@ const SignIn = () => {
               inputType="email"
               name="email"
               placeholder="@포함 필수"
-              value={signinValue.eamil}
+              value={signinValue.email}
               onChange={e =>
                 setSigninValue(prev => ({ ...prev, email: e.target.value }))
               }
