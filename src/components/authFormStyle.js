@@ -50,23 +50,6 @@ export const InputBox = styled.input.attrs(props => ({
   border: 1px solid gray;
 `;
 
-export const SubmitBtn = styled.button.attrs({
-  type: 'submit',
-})`
-  margin: 5px 0;
-  padding: 2px;
-  width: 220px;
-  background-color: skyblue;
-  padding: 10px 16px 16px;
-  cursor: ${props => props.disabled && 'not-allowed'};
-`;
-
-export const GotoBtn = styled(SubmitBtn).attrs({ type: 'button' })`
-  width: 80px;
-  margin-left: 20px;
-  background-color: lightgray;
-`;
-
 export const ButtonAria = styled.div`
 display: flex;
 justify-content:space-between;
