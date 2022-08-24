@@ -1,3 +1,4 @@
+/* eslint-disable*/ 
 import React, { useState } from 'react';
 import { APP_API } from '../../../config';
 import { observer } from 'mobx-react';
@@ -84,7 +85,7 @@ const TodoItem = observer(({ id, isCompleted, todoContent }) => {
               setIsEditMode(prev => !prev);
             }}
           >
-            제출
+            완료
           </button>
           <button type="button" onClick={() => setIsEditMode(prev => !prev)}>
             취소

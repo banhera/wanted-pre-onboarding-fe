@@ -1,8 +1,11 @@
+/* eslint-disable*/ 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { APP_API } from '../../config';
 import * as S from '../../components/authFormStyle';
+import { Button } from 'antd';
+import 'antd/dist/antd.css';
 
 const Signup = () => {
   const [signupValue, setSignupValue] = useState({ email: '', password: '' });
@@ -34,7 +37,8 @@ const Signup = () => {
 
   return (
     <>
-      <h1>회원가입</h1>
+    <S.Wrapper>
+    <S.h1>회원가입</S.h1>
       <S.Form onSubmit={SignupRequest}>
         <S.LabelWrapper>
           <S.Label>
@@ -64,13 +68,14 @@ const Signup = () => {
             />
           </S.Label>
         </S.LabelWrapper>
-
-        <S.SubmitBtn disabled={!isValid}>sign up</S.SubmitBtn>
+        <S.ButtonAria>
+        <Button htmlType="submit" disabled={!isValid} type="primary">sign up</Button>
         <Link to="/">
-          go to sign in
-          <S.GotoBtn>sign in</S.GotoBtn>
+          <Button type="primary">login</Button>
         </Link>
+        </S.ButtonAria>
       </S.Form>
+      </S.Wrapper>
     </>
   );
 };

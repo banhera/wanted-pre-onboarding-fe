@@ -1,3 +1,4 @@
+/* eslint-disable*/ 
 import styled from 'styled-components';
 import variables from '../../../styles/variables';
 
@@ -5,7 +6,7 @@ export const TodoList = styled.li`
   width: 100%;
   height: 30px;
   margin: 10px 0;
-  background-color: #d7bc6a;
+  background-color: pink;
   border-radius: 20px;
   padding: 5px 10px;
   ${variables.flex({ justify: 'start' })};
@@ -31,14 +32,13 @@ export const TodoContent = styled.div`
 export const TodoEdit = styled.input`
   width: 70%;
   height: 100%;
-  background-color: burlywood;
+  background-color: white;
   ${variables.flex({ justify: 'start' })};
 `;
 
 export const TodoControlBtns = styled.div`
   width: 30%;
   height: 100%;
-  /* background-color: rebeccapurple; */
   ${variables.flex({ justify: 'space-around' })};
 
   button {

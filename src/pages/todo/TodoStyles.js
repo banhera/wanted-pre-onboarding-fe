@@ -1,11 +1,17 @@
+/* eslint-disable*/ 
 import styled from 'styled-components';
 import variables from '../../styles/variables';
+
+export const H1 = styled.h1`
+font-size:50px;
+padding-top:20px;
+`;
 
 export const TodoWrapper = styled.div`
   width: 60%;
   height: 90vh;
   margin-top: 20px;
-  background-color: gray;
+  border:solid 1px #dddddd;
   ${variables.flex({ direction: 'column', justify: 'start' })}
 `;
 
@@ -17,6 +23,7 @@ export const TodoTop = styled.div`
   input {
     width: 50%;
     padding: 5px;
+    border-radius:16px;
   }
 
   button {
@@ -41,7 +48,7 @@ export const TodoList = styled.li`
 export const TodoContent = styled.div`
   width: 70%;
   height: 100%;
-  background-color: burlywood;
+  background-color: white;
   ${variables.flex({ justify: 'start' })};
 
   button {
@@ -49,7 +56,7 @@ export const TodoContent = styled.div`
     width: 20px;
     height: 20px;
     border: 2px solid gray;
-    background-color: ${props => props.clearBtn};
+    background-color: white;
     border-radius: 50%;
     margin-right: 10px;
   }

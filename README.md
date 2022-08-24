@@ -1,11 +1,11 @@
 ### 지원자
 
-- 이름 : 전지현
-- 이메일 : jhplus24@gmail.com
+- 이름 : 김은정
+- 이메일 : dmswj@gmail.com
 
 ### 데모 영상
 
-👉 [영상 보러가기](https://www.youtube.com/watch?v=PMbGETHeKjw)
+👉 [영상 보러가기]
 
 ### 사용 기술
 
@@ -17,4 +17,3 @@
 
     1. npm install
     2. npm start로 서버 실행
-    3. 로그인 아이디 : todo1@todo.com / 비밀번호 : todotodo1

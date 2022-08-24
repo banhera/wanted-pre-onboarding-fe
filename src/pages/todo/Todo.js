@@ -1,3 +1,4 @@
+/* eslint-disable*/ 
 import { observer } from 'mobx-react';
 
 import * as S from './TodoStyles';
@@ -57,7 +58,7 @@ const Todo = observer(() => {
 
   return (
     <>
-      <h1>Todo List</h1>
+      <S.H1>Todo List</S.H1>
       <S.TodoWrapper>
         <S.TodoTop>
           <input
@@ -66,7 +67,7 @@ const Todo = observer(() => {
             onChange={e => setTodoText(e.target.value)}
           />
           <button type="button" onClick={todoPost}>
-            add
+            추가
           </button>
         </S.TodoTop>
         <S.TodoBody>

@@ -1,10 +1,13 @@
+/* eslint-disable*/ 
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 import { APP_API } from '../../config';
 import * as S from '../../components/authFormStyle';
+import { Button } from 'antd';
+import 'antd/dist/antd.css';
 
-const SignIn = () => {
+const LogIn = () => {
   const [signinValue, setSigninValue] = useState({ email: '', password: '' });
 
   const navigate = useNavigate();
@@ -19,6 +22,7 @@ const SignIn = () => {
   }, []);
 
   const signInRequest = e => {
+    console.log(1)
     e.preventDefault();
 
     fetch(`${APP_API.signin}`, {
@@ -39,12 +43,15 @@ const SignIn = () => {
         localStorage.setItem('access_token', result.access_token);
         alert('로그인 성공');
         navigate('/todo');
-      });
+      })
   };
-
+  const goToSignUp = ()=>{
+  navigate('/signup')
+  }
   return (
     <>
-      <h1>로그인</h1>
+    <S.Wrapper>
+      <S.h1>로그인</S.h1>
       <S.Form onSubmit={signInRequest}>
         <S.LabelWrapper>
           <S.Label>
@@ -52,14 +59,13 @@ const SignIn = () => {
             <S.InputBox
               inputType="email"
               name="email"
-              placeholder="@포함 필수"
+              placeholder="@포함 입력"
               value={signinValue.email}
               onChange={e =>
                 setSigninValue(prev => ({ ...prev, email: e.target.value }))
               }
             />
           </S.Label>
-
           <S.Label>
             <span>Password</span>
             <S.InputBox
@@ -74,15 +80,16 @@ const SignIn = () => {
             />
           </S.Label>
         </S.LabelWrapper>
-
-        <S.SubmitBtn disabled={!isValid}>sign in</S.SubmitBtn>
-        <Link to="/signup">
-          go to sign up
-          <S.GotoBtn>sign up</S.GotoBtn>
-        </Link>
+        <S.ButtonAria>
+        <Button htmlType="submit" disabled={!isValid} type="primary">Log in</Button>
+        <Button type="primary" onClick={() => goToSignUp()} >sign up</Button>
+        </S.ButtonAria>
       </S.Form>
+      </S.Wrapper>
     </>
   );
 };
 
-export default SignIn;
+
+
+export default LogIn;

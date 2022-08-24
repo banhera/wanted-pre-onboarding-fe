@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import GlobalStyle from './styles/GlobalStyle';
 import variables from './styles/variables';
 
-import SignIn from './pages/signIn/Signin';
+import LogIn from './pages/login/LogIn';
 import Signup from './pages/signup/Signup';
 import Todo from './pages/todo/Todo';
 
@@ -22,7 +22,7 @@ function Router() {
       <Container>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<SignIn />} />
+            <Route path="/" element={<LogIn />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/todo" element={<Todo />} />
           </Routes>
